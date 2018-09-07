@@ -1,0 +1,5 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =3
+let g:netrw_dirhist_1='/run/media/alone/672e045a-2547-4644-9afc-8a5f85aed400/home/rafihyahya/Downloads/voidrice-master/.config/i3'
+let g:netrw_dirhist_2='/home/alone/.config/polybar'
+let g:netrw_dirhist_3='/home/alone/.i3'
