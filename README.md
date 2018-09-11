@@ -1,6 +1,6 @@
 # dotfile_i3_alone
 My Custom Dotfiles for the I3wm-gaps
-![Alt text](https://github.com/RafihYahya/dotfile_i3_alone/blob/master/2018-09-07-112743_1366x768_scrot.png?raw=true "Optional Title")
+![Alt text](https://github.com/RafihYahya/dotfile_i3_alone/blob/master/2018-09-11-111759_1366x768_scrot.png?raw=true "Optional Title")
 
 #Installation:
 
