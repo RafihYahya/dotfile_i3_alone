@@ -1,0 +1,12 @@
+[settings]
+default-charset=ISO-8859-1
+enable-developer-extras=true
+zoom-text-and-images=true
+last-window-width=441
+last-window-height=722
+location-entry-search=https://duckduckgo.com/?q=%s
+toolbar-items=TabNew,Back,NextForward,ReloadStop,BookmarkAdd,Location,Search,Trash,CompactMenu
+homepage=about:search
+tabhome=about:dial
+download-folder=/home/alone/Downloads
+user-agent=Mozilla/5.0 (X11; Linux) AppleWebKit/537.32 (KHTML, like Gecko) Chrome/18.0.1025.133 Safari/537.32 Midori/0.5
