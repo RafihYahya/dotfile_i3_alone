@@ -12,7 +12,10 @@ My Custom Dotfiles for the I3wm-gaps
 
 4-  Set Wallpaper With nitrogen
 
-  #ENJOY!!!
+BONUS:: For Xfce4 Move The file to ~/.config
+	You Can Then Remove unwanted change inside the folder
+	
+  	#ENJOY!!!
 
 Heavily influenced by Manjaro I3wm.
 
