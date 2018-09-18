@@ -165,22 +165,28 @@ set $ws2 2:2-WEB
 set $ws3 3:3-Multimedia
 set $ws4 4:4-READING
 set $ws5 5:5-IDE
-set $ws6 6:6-PICS EDIT
-set $ws7 7:7-MULTI EDIT
-set $ws8 8:8-3D
+set $ws6 6:6-ART/MANIPULATION
+set $ws7 7:7-VIDEO/AUDIO EDITING
+set $ws8 8:8-3D/2D
 set $ws9 9:9-IRC
 set $ws10 10:10-Emulation
+set $ws11 11:11-OFFICE
+set $ws12 12:12-GAMES
+
+
 # switch to workspace
 bindsym $mod+1 workspace $ws1
 bindsym $mod+2 workspace $ws2
 bindsym $mod+3 workspace $ws3
 bindsym $mod+4 workspace $ws4
 bindsym $mod+5 workspace $ws5
-bindsym $mod+6 workspace $ws6
+bindsym $mod+i workspace $ws6
 bindsym $mod+7 workspace $ws7
 bindsym $mod+8 workspace $ws8
 bindsym $mod+9 workspace $ws9
 bindsym $mod+0 workspace $ws10
+bindsym $mod+o workspace $ws11
+bindsym $mod+p workspace $ws12
 
 # Move focused container to workspace
 bindsym $mod+Ctrl+1 move container to workspace $ws1
@@ -193,6 +199,8 @@ bindsym $mod+Ctrl+7 move container to workspace $ws7
 bindsym $mod+Ctrl+8 move container to workspace $ws8
 bindsym $mod+Ctrl+9 move container to workspace $ws9
 bindsym $mod+Ctrl+0 move container to workspace $ws10
+bindsym $mod+Ctrl+o move container to workspace $ws11
+bindsym $mod+Ctrl+p move container to workspace $ws12
 
 # Move to workspace with focused container
 bindsym $mod+Shift+1 move container to workspace $ws1; workspace $ws1
@@ -205,21 +213,49 @@ bindsym $mod+Shift+7 move container to workspace $ws7; workspace $ws7
 bindsym $mod+Shift+8 move container to workspace $ws8; workspace $ws8
 bindsym $mod+Shift+9 move container to workspace $ws9; workspace $ws9
 bindsym $mod+Shift+0 move container to workspace $ws10; workspace $ws10
+bindsym $mod+Shift+o move container to workspace $ws11; workspace $ws11
+bindsym $mod+Shift+p move container to workspace $ws12; workspace $ws12
 
 # Open applications on specific workspaces
 # assign [class="Thunderbird"] $ws1
+
 assign [class="Firefox"] $ws2
+assign [class="Opera"] $ws2
+assign [class="Midori"] $ws2
+assign [class="Pale moon"] $ws2
+
 
 assign [class="Blender"] $ws8
 
+
+
 assign [class="Kdenlive"] $ws7
-assign [class="Untitled - Shotcut"] $ws7
+#assign [class="Untitled - Shotcut"] $ws7
 assign [class="Audacity"] $ws7
 assign [class="Hydrogen"] $ws7
+
+assign [class="vlc"] $ws3
+assign [class="Gnome-mpv"] $ws3
+
 
 assign [class="Gimp"] $ws6
 assign [class="Krita"] $ws6
 assign [class="Inkscape"] $ws6
+
+
+assign [class="Emacs"] $ws5
+assign [class="Gedit"] $ws5
+assign [class="Sublime_text"] $ws5
+assign [class="QtCreator"] $ws5
+assign [class="Atom"] $ws5
+assign [class="Eclipse"] $ws5
+
+assign [class="VirtualBox Manager"] $ws10
+
+assign [class="libreoffice"] $ws11
+
+assign [class="Steam"] $ws12
+
 
 # assign [class="Pcmanfm"] $ws3
 # assign [class="Skype"] $ws5
