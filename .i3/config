@@ -162,14 +162,14 @@ bindsym $mod+Ctrl+Left workspace prev
 #                 set $ws2 2:
 set $ws1 1
 set $ws2 2:2-WEB
-set $ws3 3:3-MULTIMEDIA
+set $ws3 3:3-Multimedia
 set $ws4 4:4-READING
-set $ws5 5:5-IDE/CODING
+set $ws5 5:5-IDE
 set $ws6 6:6-ART/MANIPULATION
 set $ws7 7:7-VIDEO/AUDIO EDITING
-set $ws8 8:8-2D/3D
-set $ws9 9:9-IRC/VOIP
-set $ws10 10:10-EMULATION/SCIENCE
+set $ws8 8:8-3D/2D
+set $ws9 9:9-IRC
+set $ws10 10:10-Emulation
 set $ws11 11:11-OFFICE
 set $ws12 12:12-GAMES
 
@@ -217,47 +217,32 @@ bindsym $mod+Shift+o move container to workspace $ws11; workspace $ws11
 bindsym $mod+Shift+p move container to workspace $ws12; workspace $ws12
 
 # Open applications on specific workspaces
-
 # assign [class="Thunderbird"] $ws1
 
-#assign workspace 2
 assign [class="Firefox"] $ws2
 assign [class="Opera"] $ws2
 assign [class="Midori"] $ws2
 assign [class="Pale moon"] $ws2
 
 
-#assign workspace 8
 assign [class="Blender"] $ws8
 
 
-#assign workspace 4
-assign [class="Evince"] $ws4
 
-
-#assign workspace 7
 assign [class="Kdenlive"] $ws7
 #assign [class="Untitled - Shotcut"] $ws7
 assign [class="Audacity"] $ws7
 assign [class="Hydrogen"] $ws7
 
-
-
-#assign workspace 3
 assign [class="vlc"] $ws3
 assign [class="Gnome-mpv"] $ws3
 
 
-
-#assign workspace 6
 assign [class="Gimp"] $ws6
 assign [class="Krita"] $ws6
 assign [class="Inkscape"] $ws6
-assign [class="karbon"] $ws6
 
 
-
-#assign workspace 5
 assign [class="Emacs"] $ws5
 assign [class="Gedit"] $ws5
 assign [class="Sublime_text"] $ws5
@@ -265,19 +250,11 @@ assign [class="QtCreator"] $ws5
 assign [class="Atom"] $ws5
 assign [class="Eclipse"] $ws5
 
-
-
-#assign workspace 10
 assign [class="VirtualBox Manager"] $ws10
 
-
-#assign workspace 11
 assign [class="libreoffice"] $ws11
 
-
-#assign workspace 12
 assign [class="Steam"] $ws12
-
 
 
 # assign [class="Pcmanfm"] $ws3
