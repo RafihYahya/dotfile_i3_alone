@@ -1,6 +1,8 @@
 # i3 config file (v4)
 # Please see http://i3wm.org/docs/userguide.html for a complete reference!
 
+# To remove compton support you must comment all sentence cont aining compton 
+
 #Disable Touchpad / Comment the following to enable it
 #xinput --disable "SynPS/2 Synaptics TouchPad"
 
@@ -52,7 +54,7 @@ bindsym $mod+Ctrl+m exec terminal -e 'alsamixer'
 #exec --no-startup-id pulseaudio
 #exec --no-startup-id pa-applet
 #bindsym $mod+Ctrl+m exec pavucontrol
-
+exec --no-startup-id touchpad-disabler
 ################################################################################################
 
 # Screen brightness controls
@@ -162,17 +164,17 @@ bindsym $mod+Ctrl+Left workspace prev
 #                 set $ws2 2:
 set $ws1 1
 set $ws2 2:2-WEB
-set $ws3 3:3-Multimedia
+set $ws3 3:3-MULTIMEDIA
 set $ws4 4:4-READING
-set $ws5 5:5-IDE
+set $ws5 5:5-IDE/CODING
 set $ws6 6:6-ART/MANIPULATION
 set $ws7 7:7-VIDEO/AUDIO EDITING
-set $ws8 8:8-3D/2D
-set $ws9 9:9-IRC
-set $ws10 10:10-Emulation
+set $ws8 8:8-2D/3D
+set $ws9 9:9-IRC/VOIP
+set $ws10 10:10-EMULATION/TORRENT
 set $ws11 11:11-OFFICE
 set $ws12 12:12-GAMES
-
+set $ws13 13:13-PENTESTING
 
 # switch to workspace
 bindsym $mod+1 workspace $ws1
@@ -217,45 +219,73 @@ bindsym $mod+Shift+o move container to workspace $ws11; workspace $ws11
 bindsym $mod+Shift+p move container to workspace $ws12; workspace $ws12
 
 # Open applications on specific workspaces
+
 # assign [class="Thunderbird"] $ws1
 
+#assign workspace 2
 assign [class="Firefox"] $ws2
 assign [class="Opera"] $ws2
 assign [class="Midori"] $ws2
 assign [class="Pale moon"] $ws2
+assign [class="qutebrowser"] $ws2
 
-
+#assign workspace 8
 assign [class="Blender"] $ws8
+assign [class="LibreCAD"] $ws8
 
+#assign workspace 4
+assign [class="Evince"] $ws4
+assign [class="Epdfview"] $ws4
+assign [class="qpdfview"] $ws4
 
-
+#assign workspace 7
 assign [class="Kdenlive"] $ws7
 #assign [class="Untitled - Shotcut"] $ws7
 assign [class="Audacity"] $ws7
 assign [class="Hydrogen"] $ws7
+assign [class="Shotcut"] $ws7
 
+
+#assign workspace 3
 assign [class="vlc"] $ws3
 assign [class="Gnome-mpv"] $ws3
+assign [class="Audacious"] $ws3
 
 
+#assign workspace 6
 assign [class="Gimp"] $ws6
 assign [class="Krita"] $ws6
 assign [class="Inkscape"] $ws6
+assign [class="karbon"] $ws6
 
 
+
+#assign workspace 5
 assign [class="Emacs"] $ws5
 assign [class="Gedit"] $ws5
 assign [class="Sublime_text"] $ws5
 assign [class="QtCreator"] $ws5
 assign [class="Atom"] $ws5
 assign [class="Eclipse"] $ws5
+assign [class="Texmaker"] $ws5
 
+
+#assign workspace 10
 assign [class="VirtualBox Manager"] $ws10
+assign [class="Deluge"] $ws10
 
+#assign workspace 11
 assign [class="libreoffice"] $ws11
+assign [class="Abiword"] $ws11
 
+
+#assign workspace 12
 assign [class="Steam"] $ws12
+assign [class="Gnome-chess"] $ws12
 
+#assign workspace 9
+assign [class="discord"] $ws9
+assign [class="Pidgin"] $ws9
 
 # assign [class="Pcmanfm"] $ws3
 # assign [class="Skype"] $ws5
@@ -287,6 +317,7 @@ for_window [class="Skype"] floating enable border normal
 for_window [class="Timeset-gui"] floating enable border normal
 for_window [class="(?i)virtualbox"] floating enable border normal
 for_window [class="Xfburn"] floating enable
+for_window [class="Gnome-mpv"] floating enable
 
 # switch to workspace with urgent window automatically
 for_window [urgent=latest] focus
@@ -412,15 +443,15 @@ bar {
 ##
 #background 222D31 (color)
     colors {
-        background #11082e60
-        statusline #F9FAF9
-        separator  #454947
+        background #0d0622
+        statusline #779afe
+        separator  #fd0050
 
 #                     border  backgr. text
  #focused windows back 16a085 text 292F34
-        focused_workspace  #F9FAF9 #11082e #EEE8D5
+        focused_workspace  #779afe #11082e #fb2266
         active_workspace   #595B5B #353836 #FDF6E3
-        inactive_workspace #595B5B #222D31 #EEE8D5
+        inactive_workspace #2b204f #0f0727 #8b8a88
         binding_mode       #16a085 #2C2C2C #F9FAF9
         urgent_workspace   #16a085 #FDF6E3 #E5201D
     }
@@ -433,7 +464,7 @@ bindsym $mod+m bar mode toggle
 
 # Theme colors
 # class                   border  backgr. text    indic.   child_border
-  client.focused          #556064 #556064 #80FFF9 #FDF6E3
+  client.focused          #747e82 #556064 #80FFF9 #FDF6E3
   client.focused_inactive #2F3D44 #2F3D44 #1ABC9C #454948
   client.unfocused        #2F3D44 #2F3D44 #1ABC9C #454948
   client.urgent           #CB4B16 #FDF6E3 #1ABC9C #268BD2
